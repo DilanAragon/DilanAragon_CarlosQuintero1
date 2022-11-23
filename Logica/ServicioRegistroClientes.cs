@@ -27,7 +27,7 @@ namespace Logica
                 //validar
                 if (GetById(string.IsNullOrEmpty(registro.Id) ? 0 : Convert.ToInt32(registro.Id)) != null)
                 {
-                    return "contacto ya existe con este numero de telefono";
+                    return "Cliente ya existe";
                 }
                 // fin validar
 
