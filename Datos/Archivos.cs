@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Datos
+﻿namespace Datos
 {
+    using Entidades;
+    using System;
+    using System.IO;
+
     public class Archivos
     {
         protected string ruta;
@@ -18,7 +15,7 @@ namespace Datos
         {
             ruta = "Registros.TXT";
         }
-        public bool Guardar(Entidades.Persona registro)
+        public bool Guardar(Persona registro)
         {
             try
             {
