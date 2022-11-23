@@ -49,9 +49,9 @@ namespace Presentacion
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var MenuEntrenadores = new MenuEntrenadores();
+            var form1 = new Form1();
             this.Hide();
-            MenuEntrenadores.Show();
+            form1.Show();
         }
     }
 }

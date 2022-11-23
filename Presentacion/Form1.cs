@@ -19,16 +19,16 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var MenuClientes = new MenuClientes();
+            var registroClientes = new RegistroClientes();
             this.Hide();
-            MenuClientes.Show();
+            registroClientes.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var MenuEntrenadores = new MenuEntrenadores();
+            var registroEntrenadores = new RegistroEntrenadores();
             this.Hide();
-            MenuEntrenadores.Show();
+            registroEntrenadores.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

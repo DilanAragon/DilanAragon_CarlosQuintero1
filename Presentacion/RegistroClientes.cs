@@ -47,9 +47,9 @@ namespace Presentacion
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            var MenuClientes = new MenuClientes();
+            var form1 = new Form1();
             this.Hide();
-            MenuClientes.Show();
+            form1.Show();
         }
     }
 }
