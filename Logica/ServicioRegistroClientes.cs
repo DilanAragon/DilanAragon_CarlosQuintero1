@@ -25,7 +25,7 @@ namespace Logica
             public string Save(Clientes registro)
             {
                 //validar
-                if (GetById(registro.Id) != null)
+                if (GetById(string.IsNullOrEmpty(registro.Id) ? 0 : Convert.ToInt32(registro.Id)) != null)
                 {
                     return "contacto ya existe con este numero de telefono";
                 }
@@ -35,8 +35,8 @@ namespace Logica
 
                 //Refresh();
 
-                return estado ? $"el contacto se agrego correctamente con el nombre {registro.Nombre}" :
-                                     $"ERROR al Guardar el contacto con el nombre {registro.Nombre}";
+                return estado ? $"el Cliente se agrego correctamente con el nombre {registro.Nombre}" :
+                                     $"ERROR al Guardar el cliente con el nombre {registro.Nombre}";
             }
 
             public string Delete(Clientes registro)
@@ -44,7 +44,7 @@ namespace Logica
                 clientela.Remove(registro);
                 repositorioRegistroClientes.Update(clientela);
                 Refresh();
-                return $"el contacto se elimino correctamente con el nombre {registro.Nombre}";
+                return $"el Cliente se elimino correctamente con el nombre {registro.Nombre}";
             }
 
             public string Edit(Clientes oldRegistro, Clientes UpdateRegistro)
@@ -57,7 +57,7 @@ namespace Logica
                 oldRegistro.Correo = UpdateRegistro.Correo;
                 var estado = repositorioRegistroClientes.Update(clientela);
                 Refresh();
-                return estado ? $"se actulizo el contacto {UpdateRegistro.Nombre}" : $"ERROR al actulizar el contacto {UpdateRegistro.Nombre}";
+                return estado ? $"se actulizo el Cliente {UpdateRegistro.Nombre}" : $"ERROR al actulizar el Cliente {UpdateRegistro.Nombre}";
             }
 
             public bool Exist(Clientes registro)
@@ -77,12 +77,12 @@ namespace Logica
                 return clientela;
             }
 
-            public Clientes GetById(string id)
+            public Clientes GetById(int id)
             {
                 List<Clientes> clientS = repositorioRegistroClientes.GetAll();
                 foreach (var item in clientS)
                 {
-                    if (item.Id == id)
+                    if (item.Id == id.ToString())
                     {
                         return item;
                     }

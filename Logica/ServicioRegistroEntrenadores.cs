@@ -14,7 +14,7 @@ namespace Logica
         readonly RepositorioRegistroEntrenadores repositorioRegistroEntrenadores;
         public ServicioRegistroEntrenadores()
         {
-            repositorioRegistroEntrenadores = new RepositorioRegistroEntrenadores("Entrenadores.dat");
+            repositorioRegistroEntrenadores = new RepositorioRegistroEntrenadores("Entrenadores.txt");
             entrenadoresl = new List<Entrenadores>();
         }
         public string Delete(Entrenadores registro)
@@ -54,11 +54,11 @@ namespace Logica
             return entrenadoresl;
         }
 
-        public Entrenadores GetById(string id)
+        public Entrenadores GetById(int id)
         {
             foreach (var item in entrenadoresl)
             {
-                if ( item.Id == id)
+                if ( item.CodigoEntrenador == id)
                 {
                     return item;
                 }
@@ -82,16 +82,16 @@ namespace Logica
         {
 
 
-            if (GetByPhone(registro.Telefono) != null)
+            if (GetById(registro.CodigoEntrenador) != null)
             {
-                return $"el Registro ya existe con este numero de telefono {registro.Telefono}";
+                return $"el entrenador ya existe con este codigo {registro.CodigoEntrenador}";
             }
             var estado = repositorioRegistroEntrenadores.Guardar(registro);
 
             Refresh();
 
-            return estado ? $"el Registro se agrego correctamente con el nombre {registro.Nombre}" :
-                                 $"ERROR al Guardar el Registro con el nombre {registro.Nombre}";
+            return estado ? $"el entrenador se agrego correctamente con el nombre {registro.Nombre}" :
+                                 $"ERROR al Guardar el entrenador con el nombre {registro.Nombre}";
         }
     }
 }
