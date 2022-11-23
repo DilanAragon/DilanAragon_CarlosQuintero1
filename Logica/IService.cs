@@ -15,7 +15,7 @@ namespace Logica
         string Delete(T registro);
         string Edit(T oldRegistro, T UpdateRegistro);
         List<T> GetAll();
-        T GetById(string id);
+        T GetById(int id);
         T GetByPhone(string phone);
         bool Exist(T registro);
 
