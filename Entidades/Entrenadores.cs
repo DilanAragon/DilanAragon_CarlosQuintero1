@@ -15,7 +15,7 @@ namespace Entidades
         }
         public override string ToString()
         {
-            return $"{Id};{Nombre};{Telefono};{Correo};{CodigoEntrenador}";
+            return $"{Nombre};{Telefono};{Correo};{CodigoEntrenador}";
         }
     }
 }

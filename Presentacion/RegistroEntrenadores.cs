@@ -25,7 +25,6 @@ namespace Presentacion
             var entrenador = new Entrenadores()
             {
                 Nombre = (txtNom.Text),
-                Id = (txtId.Text),
                 Correo = txtCorreo.Text,
                 Telefono = txtTel.Text,
                 CodigoEntrenador=Convert.ToInt32(txtCodigo.Text),
@@ -37,7 +36,6 @@ namespace Presentacion
         private void LimpiarDatos()
         {
             txtNom.Text = String.Empty;
-            txtId.Text = String.Empty;
             txtTel.Text = String.Empty;
             txtCodigo.Text = String.Empty;
             txtCorreo.Text = String.Empty;
