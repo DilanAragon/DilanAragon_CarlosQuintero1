@@ -10,6 +10,7 @@ namespace Entidades
     {
         public int PesoCliente { get; set; }
         public int AlturaCliente { get; set; }
+        public int Mensualidad { get; set; }
 
         public Clientes()
         {
@@ -18,7 +19,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return $"{Id};{Nombre};{Telefono};{AlturaCliente};{PesoCliente};{Correo}";
+            return $"{Id};{Nombre};{Telefono};{AlturaCliente};{PesoCliente};{Correo};{Mensualidad}";
         }
     }
     

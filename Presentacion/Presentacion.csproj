@@ -54,18 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegistroClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistroClientes.Designer.cs">
-      <DependentUpon>RegistroClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RegistroEntrenadores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistroEntrenadores.Designer.cs">
-      <DependentUpon>RegistroEntrenadores.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,12 +66,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegistroClientes.resx">
-      <DependentUpon>RegistroClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegistroEntrenadores.resx">
-      <DependentUpon>RegistroEntrenadores.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

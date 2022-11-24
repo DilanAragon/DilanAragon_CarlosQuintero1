@@ -10,12 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentacion
+namespace PresentacionFinal
 {
-    public partial class RegistroEntrenadores : Form
+    public partial class ControlEntrenadores : Form
     {
         readonly ServicioRegistroEntrenadores sistemaRegistroEntrenadores;
-        public RegistroEntrenadores()
+        public ControlEntrenadores()
         {
             InitializeComponent();
             sistemaRegistroEntrenadores = new ServicioRegistroEntrenadores();
@@ -24,10 +24,10 @@ namespace Presentacion
         {
             var entrenador = new Entrenadores()
             {
-                Nombre = (txtNom.Text),
-                Correo = txtCorreo.Text,
-                Telefono = txtTel.Text,
-                CodigoEntrenador=Convert.ToInt32(txtCodigo.Text),
+                Nombre = (txtNameTrainer.Text),
+                Correo = txtMailTrainer.Text,
+                Telefono = txtPhoneTrainer.Text,
+                CodigoEntrenador = Convert.ToInt32(txtCode.Text),
             };
             var msj = sistemaRegistroEntrenadores.Save(entrenador);
             MessageBox.Show(msj);
@@ -35,23 +35,15 @@ namespace Presentacion
         }
         private void LimpiarDatos()
         {
-            txtNom.Text = String.Empty;
-            txtTel.Text = String.Empty;
-            txtCodigo.Text = String.Empty;
-            txtCorreo.Text = String.Empty;
+            txtNameTrainer.Text = String.Empty;
+            txtPhoneTrainer.Text = String.Empty;
+            txtCode.Text = String.Empty;
+            txtMailTrainer.Text = String.Empty;
         }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
             LimpiarDatos();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            var form1 = new Form1();
-            this.Hide();
-            form1.Show();
         }
     }
 }

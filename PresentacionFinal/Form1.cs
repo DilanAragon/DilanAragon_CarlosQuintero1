@@ -16,6 +16,7 @@ namespace PresentacionFinal
         public Form1()
         {
             InitializeComponent();
+            PersonalizarDiseño();
         }
 
         private void BotonCerrar_Click(object sender, EventArgs e)
@@ -58,20 +59,20 @@ namespace PresentacionFinal
 
         }
 
-        private void BotonReportes_Click(object sender, EventArgs e)
-        {
-            PanelSubMenuReporte.Visible = true;    
-        }
+        //private void BotonReportes_Click(object sender, EventArgs e)
+        //{
+        //    PanelSubMenuReporte.Visible = true;    
+        //}
 
-        private void BotonReporteMensualidad_Click(object sender, EventArgs e)
-        {
-            PanelSubMenuReporte.Visible = false;
-        }
+        //private void BotonReporteMensualidad_Click(object sender, EventArgs e)
+        //{
+        //    PanelSubMenuReporte.Visible = false;
+        //}
 
-        private void BotonReporteCliente_Click(object sender, EventArgs e)
-        {
-            PanelSubMenuReporte.Visible = false;
-        }
+        //private void BotonReporteCliente_Click(object sender, EventArgs e)
+        //{
+        //    PanelSubMenuReporte.Visible = false;
+        //}
         private void AbrirFormularioHijo(object formHijo)
         {
             if (this.PanelContenedor.Controls.Count > 0)
@@ -84,15 +85,76 @@ namespace PresentacionFinal
             fh.Show();
             
         }
-
-        private void BotonClientes_Click(object sender, EventArgs e)
+        private void PersonalizarDiseño()
         {
-            AbrirFormularioHijo(new ControlClientes());
+            BotonSubMenuAñadir.Visible= false;
+            BotonSubMenuAñadirTrainer.Visible= false;
+            BotonSubMenuBuscar.Visible= false;
+            BotonSubMenuBuscarTrainer.Visible= false;
+        }
+        private void OcultarSubmenu()
+        {
+            if(BotonClientes.Visible==true)
+                BotonSubMenuAñadir.Visible= true;
+                BotonSubMenuBuscar.Visible= true;
+            if(BotonEntrenadores.Visible==true)
+                BotonSubMenuBuscarTrainer.Visible= true;
+                BotonSubMenuAñadirTrainer.Visible = true;
+            if(BotonReportes.Visible==true)
+                BotonSubMenuReporteIngreso.Visible= true;
+                BotonSubMenuHistorialUsuario.Visible= true;
+        }
+        private void MostrarSubMenu(Panel SubMenu)
+        {
+            if (SubMenu.Visible == false)
+            {
+                OcultarSubmenu();
+                SubMenu.Visible = true;
+            }
+            else
+            {
+                SubMenu.Visible = false; 
+            }
+        
+        }
+        private void BotonClientes_Click(object sender, EventArgs e)
+
+        {
+            MostrarSubMenu(PanelSubMenuMedios);
+         
         }
 
         private void PbLogo_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new Inicio());
+        }
+
+        private void BotonSubMenuAñadir_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new ControlClientes());
+            OcultarSubmenu();
+        }
+
+        private void BotonEntrenadores_Click(object sender, EventArgs e)
+        {
+            MostrarSubMenu(PanelSubMedioTrainer);
+            
+        }
+
+        private void BotonReportes_Click(object sender, EventArgs e)
+        {
+            MostrarSubMenu(PanelSubMedioReporte);
+        }
+
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BotonSubMenuAñadirTrainer_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new ControlEntrenadores());
+            OcultarSubmenu();
         }
     }
 }
