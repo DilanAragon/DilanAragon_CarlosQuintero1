@@ -38,20 +38,20 @@
             this.PbLogo = new System.Windows.Forms.PictureBox();
             this.BotonClientes = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.BotonEntrenadores = new System.Windows.Forms.Button();
             this.PanelSubMenuMedios = new System.Windows.Forms.Panel();
-            this.BotonSubMenuAñadir = new System.Windows.Forms.Button();
             this.BotonSubMenuBuscar = new System.Windows.Forms.Button();
-            this.BotonSubMenuAñadirTrainer = new System.Windows.Forms.Button();
+            this.BotonSubMenuAñadir = new System.Windows.Forms.Button();
+            this.BotonEntrenadores = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.PanelSubMedioTrainer = new System.Windows.Forms.Panel();
             this.BotonSubMenuBuscarTrainer = new System.Windows.Forms.Button();
+            this.BotonSubMenuAñadirTrainer = new System.Windows.Forms.Button();
             this.BotonReportes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PanelSubMedioReporte = new System.Windows.Forms.Panel();
             this.BotonSubMenuHistorialUsuario = new System.Windows.Forms.Button();
             this.BotonSubMenuReporteIngreso = new System.Windows.Forms.Button();
-            this.PanelSubMedioReporte = new System.Windows.Forms.Panel();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonMaxVentana)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonMinimizar)).BeginInit();
@@ -157,6 +157,7 @@
             // 
             // PbLogo
             // 
+            this.PbLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PbLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
             this.PbLogo.Location = new System.Drawing.Point(3, 3);
@@ -195,23 +196,52 @@
             this.panel1.Size = new System.Drawing.Size(10, 32);
             this.panel1.TabIndex = 2;
             // 
-            // PanelContenedor
+            // PanelSubMenuMedios
             // 
-            this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.PanelContenedor.MinimumSize = new System.Drawing.Size(950, 600);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1300, 650);
-            this.PanelContenedor.TabIndex = 2;
+            this.PanelSubMenuMedios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.PanelSubMenuMedios.Controls.Add(this.BotonSubMenuBuscar);
+            this.PanelSubMenuMedios.Controls.Add(this.BotonSubMenuAñadir);
+            this.PanelSubMenuMedios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSubMenuMedios.Location = new System.Drawing.Point(11, 173);
+            this.PanelSubMenuMedios.Name = "PanelSubMenuMedios";
+            this.PanelSubMenuMedios.Size = new System.Drawing.Size(210, 82);
+            this.PanelSubMenuMedios.TabIndex = 3;
+            this.PanelSubMenuMedios.Visible = false;
             // 
-            // panel2
+            // BotonSubMenuBuscar
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.panel2.Location = new System.Drawing.Point(14, 261);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 32);
-            this.panel2.TabIndex = 11;
+            this.BotonSubMenuBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonSubMenuBuscar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonSubMenuBuscar.FlatAppearance.BorderSize = 0;
+            this.BotonSubMenuBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.BotonSubMenuBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonSubMenuBuscar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
+            this.BotonSubMenuBuscar.Location = new System.Drawing.Point(0, 40);
+            this.BotonSubMenuBuscar.Name = "BotonSubMenuBuscar";
+            this.BotonSubMenuBuscar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.BotonSubMenuBuscar.Size = new System.Drawing.Size(210, 40);
+            this.BotonSubMenuBuscar.TabIndex = 1;
+            this.BotonSubMenuBuscar.Text = "BUSCAR";
+            this.BotonSubMenuBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonSubMenuBuscar.UseVisualStyleBackColor = true;
+            // 
+            // BotonSubMenuAñadir
+            // 
+            this.BotonSubMenuAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonSubMenuAñadir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonSubMenuAñadir.FlatAppearance.BorderSize = 0;
+            this.BotonSubMenuAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.BotonSubMenuAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonSubMenuAñadir.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
+            this.BotonSubMenuAñadir.Location = new System.Drawing.Point(0, 0);
+            this.BotonSubMenuAñadir.Name = "BotonSubMenuAñadir";
+            this.BotonSubMenuAñadir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BotonSubMenuAñadir.Size = new System.Drawing.Size(210, 40);
+            this.BotonSubMenuAñadir.TabIndex = 0;
+            this.BotonSubMenuAñadir.Text = "AÑADIR";
+            this.BotonSubMenuAñadir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonSubMenuAñadir.UseVisualStyleBackColor = true;
+            this.BotonSubMenuAñadir.Click += new System.EventHandler(this.BotonSubMenuAñadir_Click);
             // 
             // BotonEntrenadores
             // 
@@ -232,69 +262,13 @@
             this.BotonEntrenadores.UseVisualStyleBackColor = true;
             this.BotonEntrenadores.Click += new System.EventHandler(this.BotonEntrenadores_Click);
             // 
-            // PanelSubMenuMedios
+            // panel2
             // 
-            this.PanelSubMenuMedios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelSubMenuMedios.Controls.Add(this.BotonSubMenuBuscar);
-            this.PanelSubMenuMedios.Controls.Add(this.BotonSubMenuAñadir);
-            this.PanelSubMenuMedios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSubMenuMedios.Location = new System.Drawing.Point(11, 173);
-            this.PanelSubMenuMedios.Name = "PanelSubMenuMedios";
-            this.PanelSubMenuMedios.Size = new System.Drawing.Size(210, 82);
-            this.PanelSubMenuMedios.TabIndex = 3;
-            this.PanelSubMenuMedios.Visible = false;
-            // 
-            // BotonSubMenuAñadir
-            // 
-            this.BotonSubMenuAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonSubMenuAñadir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonSubMenuAñadir.FlatAppearance.BorderSize = 0;
-            this.BotonSubMenuAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.BotonSubMenuAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonSubMenuAñadir.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BotonSubMenuAñadir.Location = new System.Drawing.Point(0, 0);
-            this.BotonSubMenuAñadir.Name = "BotonSubMenuAñadir";
-            this.BotonSubMenuAñadir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BotonSubMenuAñadir.Size = new System.Drawing.Size(210, 40);
-            this.BotonSubMenuAñadir.TabIndex = 0;
-            this.BotonSubMenuAñadir.Text = "AÑADIR";
-            this.BotonSubMenuAñadir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonSubMenuAñadir.UseVisualStyleBackColor = true;
-            this.BotonSubMenuAñadir.Click += new System.EventHandler(this.BotonSubMenuAñadir_Click);
-            // 
-            // BotonSubMenuBuscar
-            // 
-            this.BotonSubMenuBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonSubMenuBuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonSubMenuBuscar.FlatAppearance.BorderSize = 0;
-            this.BotonSubMenuBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.BotonSubMenuBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonSubMenuBuscar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BotonSubMenuBuscar.Location = new System.Drawing.Point(0, 40);
-            this.BotonSubMenuBuscar.Name = "BotonSubMenuBuscar";
-            this.BotonSubMenuBuscar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.BotonSubMenuBuscar.Size = new System.Drawing.Size(210, 40);
-            this.BotonSubMenuBuscar.TabIndex = 1;
-            this.BotonSubMenuBuscar.Text = "BUSCAR";
-            this.BotonSubMenuBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonSubMenuBuscar.UseVisualStyleBackColor = true;
-            // 
-            // BotonSubMenuAñadirTrainer
-            // 
-            this.BotonSubMenuAñadirTrainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonSubMenuAñadirTrainer.FlatAppearance.BorderSize = 0;
-            this.BotonSubMenuAñadirTrainer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.BotonSubMenuAñadirTrainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonSubMenuAñadirTrainer.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BotonSubMenuAñadirTrainer.Location = new System.Drawing.Point(0, 0);
-            this.BotonSubMenuAñadirTrainer.Name = "BotonSubMenuAñadirTrainer";
-            this.BotonSubMenuAñadirTrainer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BotonSubMenuAñadirTrainer.Size = new System.Drawing.Size(210, 40);
-            this.BotonSubMenuAñadirTrainer.TabIndex = 0;
-            this.BotonSubMenuAñadirTrainer.Text = "AÑADIR";
-            this.BotonSubMenuAñadirTrainer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonSubMenuAñadirTrainer.UseVisualStyleBackColor = true;
-            this.BotonSubMenuAñadirTrainer.Click += new System.EventHandler(this.BotonSubMenuAñadirTrainer_Click);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.panel2.Location = new System.Drawing.Point(14, 261);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 32);
+            this.panel2.TabIndex = 11;
             // 
             // PanelSubMedioTrainer
             // 
@@ -324,6 +298,23 @@
             this.BotonSubMenuBuscarTrainer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonSubMenuBuscarTrainer.UseVisualStyleBackColor = true;
             // 
+            // BotonSubMenuAñadirTrainer
+            // 
+            this.BotonSubMenuAñadirTrainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BotonSubMenuAñadirTrainer.FlatAppearance.BorderSize = 0;
+            this.BotonSubMenuAñadirTrainer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.BotonSubMenuAñadirTrainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonSubMenuAñadirTrainer.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
+            this.BotonSubMenuAñadirTrainer.Location = new System.Drawing.Point(0, 0);
+            this.BotonSubMenuAñadirTrainer.Name = "BotonSubMenuAñadirTrainer";
+            this.BotonSubMenuAñadirTrainer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BotonSubMenuAñadirTrainer.Size = new System.Drawing.Size(210, 40);
+            this.BotonSubMenuAñadirTrainer.TabIndex = 0;
+            this.BotonSubMenuAñadirTrainer.Text = "AÑADIR";
+            this.BotonSubMenuAñadirTrainer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonSubMenuAñadirTrainer.UseVisualStyleBackColor = true;
+            this.BotonSubMenuAñadirTrainer.Click += new System.EventHandler(this.BotonSubMenuAñadirTrainer_Click);
+            // 
             // BotonReportes
             // 
             this.BotonReportes.AllowDrop = true;
@@ -350,6 +341,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 32);
             this.panel4.TabIndex = 14;
+            // 
+            // PanelSubMedioReporte
+            // 
+            this.PanelSubMedioReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.PanelSubMedioReporte.Controls.Add(this.BotonSubMenuHistorialUsuario);
+            this.PanelSubMedioReporte.Controls.Add(this.BotonSubMenuReporteIngreso);
+            this.PanelSubMedioReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSubMedioReporte.Location = new System.Drawing.Point(11, 429);
+            this.PanelSubMedioReporte.Name = "PanelSubMedioReporte";
+            this.PanelSubMedioReporte.Size = new System.Drawing.Size(210, 82);
+            this.PanelSubMedioReporte.TabIndex = 15;
+            this.PanelSubMedioReporte.Visible = false;
             // 
             // BotonSubMenuHistorialUsuario
             // 
@@ -383,17 +386,15 @@
             this.BotonSubMenuReporteIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonSubMenuReporteIngreso.UseVisualStyleBackColor = true;
             // 
-            // PanelSubMedioReporte
+            // PanelContenedor
             // 
-            this.PanelSubMedioReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelSubMedioReporte.Controls.Add(this.BotonSubMenuHistorialUsuario);
-            this.PanelSubMedioReporte.Controls.Add(this.BotonSubMenuReporteIngreso);
-            this.PanelSubMedioReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSubMedioReporte.Location = new System.Drawing.Point(11, 429);
-            this.PanelSubMedioReporte.Name = "PanelSubMedioReporte";
-            this.PanelSubMedioReporte.Size = new System.Drawing.Size(210, 82);
-            this.PanelSubMedioReporte.TabIndex = 15;
-            this.PanelSubMedioReporte.Visible = false;
+            this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(0, 0);
+            this.PanelContenedor.MinimumSize = new System.Drawing.Size(950, 600);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1300, 650);
+            this.PanelContenedor.TabIndex = 2;
             // 
             // Form1
             // 
