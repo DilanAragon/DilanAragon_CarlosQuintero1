@@ -12,7 +12,7 @@ namespace Entidades
         public decimal AlturaCliente { get; set; }
         public int IdClientes { get; set; }
         public int IdEntrenador { get; set; }
-        public int Activo { get; set; }
+        public bool Activo { get; set; }
         public Clientes()
         {
 

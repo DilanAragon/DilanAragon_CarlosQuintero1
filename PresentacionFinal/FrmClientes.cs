@@ -95,7 +95,15 @@
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            FrmControlActivos frmPagoCliente= new FrmControlActivos();
+            Int32 selectedColumnCount = gridClientes.GetCellCount(DataGridViewElementStates.Selected);
+            if (selectedColumnCount != gridClientes.Columns.Count)
+            {
+                MessageBox.Show("Seleccione una fila", "Error");
+                return;
+            }
+            var id = gridClientes.CurrentRow.Cells[0].Value;
+            var cliente = clientService.GetClientById(Convert.ToInt32(id.ToString()));
+            FrmControlActivos frmPagoCliente= new FrmControlActivos(cliente);
             frmPagoCliente.ShowDialog();
         }
 

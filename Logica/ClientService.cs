@@ -70,5 +70,18 @@
                 return "Error: " + e.Message;
             }
         }
+        public string UpdateEstate(Clientes cliente)
+        {
+            try
+            {
+                clientesDao.UpdateEstate(cliente);
+                return "Estado modificado con exito";
+            }
+            catch (Exception e)
+            {
+
+                return "Error: " + e.Message;
+            }
+        }
     }
 }

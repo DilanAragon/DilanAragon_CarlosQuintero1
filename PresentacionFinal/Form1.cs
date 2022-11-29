@@ -123,12 +123,6 @@ namespace PresentacionFinal
             OcultarSubmenu();
         }
 
-        private void BotonPagos_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new FrmControlActivos());
-            OcultarSubmenu();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();

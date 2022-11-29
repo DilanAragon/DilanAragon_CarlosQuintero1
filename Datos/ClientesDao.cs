@@ -97,6 +97,7 @@
                 Correo = reader.GetString(5),
                 PesoCliente = (decimal)reader.GetDecimal(6),
                 AlturaCliente = (decimal)reader.GetDecimal(7),
+                Activo=(bool)reader.GetBoolean(8),
                 IdEntrenador = (int)reader.GetInt32(11),
                 Edad = (int)reader.GetInt32(12),
             };
@@ -135,7 +136,7 @@
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conecction;
-                    command.CommandText = "Update  Clientes set Nombre=@nombre,Apellido=@apellido,Edad=@Edad,Telefono=@telefono,Correo=@correo,Peso=@peso,Altura=@altura,Activo=@actuvo,IdEntrenador=@idEntrenador where IdCliente=@IdCliente";
+                    command.CommandText = "Update  Clientes set Nombre=@nombre,Apellido=@apellido,Edad=@Edad,Telefono=@telefono,Correo=@correo,Peso=@peso,Altura=@altura,Activo=@activo,IdEntrenador=@idEntrenador where IdCliente=@IdCliente";
                     command.Parameters.AddWithValue("@nombre", cliente.Nombre);
                     command.Parameters.AddWithValue("@apellido", cliente.Apellido);
                     command.Parameters.AddWithValue("@Edad", cliente.Edad);
@@ -146,6 +147,24 @@
                     command.Parameters.AddWithValue("@idEntrenador", cliente.IdEntrenador);
                     command.Parameters.AddWithValue("@idCliente", cliente.IdClientes);
                     command.Parameters.AddWithValue("@activo", true);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+                conecction.Close();
+            }
+        }
+
+        public void UpdateEstate(Clientes cliente)
+        {
+            using (var conecction = GetConnection())
+            {
+                conecction.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = conecction;
+                    command.CommandText = "Update Clientes set Activo=@activo where IdCliente=@IdCliente";
+                    command.Parameters.AddWithValue("@idCliente", cliente.IdClientes);
+                    command.Parameters.AddWithValue("@activo", cliente.Activo);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }

@@ -9,32 +9,42 @@ namespace PresentacionFinal
     {
         readonly EntrenadorService entrenadorService;
         readonly ClientService clientService;
-        public FrmControlActivos()
+        int idCliente;
+        public FrmControlActivos(Clientes cliente)
         {
             InitializeComponent();
+            entrenadorService = new EntrenadorService();
+            clientService = new ClientService();
+            lblName.Text = cliente.Nombre + " " + cliente.Apellido.Trim();
+            string estado = cliente.Activo == true ? "Activo" : "Inanctivo";
+            lblEstate.Text = "Estado: " + estado.Trim();
+            idCliente = cliente.IdClientes;
         }
-        public void Modificar()
+        public void ModificarEstado()
         {
-            var cliente = new Clientes()
+            bool estado = false;
+            if (cmbEstado.Text.Equals("Activo"))
             {
-                Activo = Convert.ToInt32(txtActivo.Text),
+                estado= true;
+            }
+            Clientes cliente = new Clientes()
+            {
+                Activo = estado,
+                IdClientes = idCliente
             };
-            var msj = clientService.UpdateClient(cliente);
+            var msj = clientService.UpdateEstate(cliente);
             MessageBox.Show(msj, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
 
         }
-        private void LoadCliente(Clientes cliente)
-        {
-            txtActivo.Text = cliente.Activo.ToString();
-        }
-            private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            Modificar();
+            ModificarEstado();
         }
     }
 }
