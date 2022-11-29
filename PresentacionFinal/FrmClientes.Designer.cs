@@ -34,12 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPagar = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.gridClientes = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPagar = new System.Windows.Forms.Button();
             this.BotonCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,6 +69,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1052, 85);
             this.panel1.TabIndex = 27;
+            // 
+            // btnPagar
+            // 
+            this.btnPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPagar.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPagar.FlatAppearance.BorderSize = 0;
+            this.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagar.ForeColor = System.Drawing.Color.White;
+            this.btnPagar.Location = new System.Drawing.Point(470, 26);
+            this.btnPagar.Name = "btnPagar";
+            this.btnPagar.Size = new System.Drawing.Size(112, 32);
+            this.btnPagar.TabIndex = 31;
+            this.btnPagar.Text = "Control";
+            this.btnPagar.UseVisualStyleBackColor = false;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // btnDetalles
             // 
@@ -157,22 +173,6 @@
             this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 30;
             this.label1.Text = "Buscar por identificaciion";
-            // 
-            // btnPagar
-            // 
-            this.btnPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPagar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPagar.FlatAppearance.BorderSize = 0;
-            this.btnPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagar.ForeColor = System.Drawing.Color.White;
-            this.btnPagar.Location = new System.Drawing.Point(470, 26);
-            this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(112, 32);
-            this.btnPagar.TabIndex = 31;
-            this.btnPagar.Text = "Pagar";
-            this.btnPagar.UseVisualStyleBackColor = false;
-            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // BotonCerrar
             // 

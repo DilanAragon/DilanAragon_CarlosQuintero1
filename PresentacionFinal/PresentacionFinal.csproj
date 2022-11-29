@@ -80,11 +80,11 @@
     <Compile Include="FrmDetallesClientes.Designer.cs">
       <DependentUpon>FrmDetallesClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPagoCliente.cs">
+    <Compile Include="FrmControlActivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPagoCliente.Designer.cs">
-      <DependentUpon>FrmPagoCliente.cs</DependentUpon>
+    <Compile Include="FrmControlActivos.Designer.cs">
+      <DependentUpon>FrmControlActivos.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -109,8 +109,8 @@
     <EmbeddedResource Include="FrmDetallesClientes.resx">
       <DependentUpon>FrmDetallesClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPagoCliente.resx">
-      <DependentUpon>FrmPagoCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FrmControlActivos.resx">
+      <DependentUpon>FrmControlActivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

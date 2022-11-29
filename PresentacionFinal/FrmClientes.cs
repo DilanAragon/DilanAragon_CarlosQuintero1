@@ -95,7 +95,7 @@
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            FrmPagoCliente frmPagoCliente= new FrmPagoCliente();
+            FrmControlActivos frmPagoCliente= new FrmControlActivos();
             frmPagoCliente.ShowDialog();
         }
 

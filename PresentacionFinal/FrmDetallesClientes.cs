@@ -41,6 +41,7 @@ namespace PresentacionFinal
             var position = texto.IndexOf('-');
             idEntrenador = Convert.ToInt32(texto.Substring(0, position));
             txtEdad.Text = cliente.Edad.ToString();
+            
         }
 
 

@@ -135,7 +135,7 @@
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conecction;
-                    command.CommandText = "Update  Clientes set Nombre=@nombre,Apellido=@apellido,Edad=@Edad,Telefono=@telefono,Correo=@correo,Peso=@peso,Altura=@altura,IdEntrenador=@idEntrenador where IdCliente=@IdCliente";
+                    command.CommandText = "Update  Clientes set Nombre=@nombre,Apellido=@apellido,Edad=@Edad,Telefono=@telefono,Correo=@correo,Peso=@peso,Altura=@altura,Activo=@actuvo,IdEntrenador=@idEntrenador where IdCliente=@IdCliente";
                     command.Parameters.AddWithValue("@nombre", cliente.Nombre);
                     command.Parameters.AddWithValue("@apellido", cliente.Apellido);
                     command.Parameters.AddWithValue("@Edad", cliente.Edad);
@@ -145,6 +145,7 @@
                     command.Parameters.AddWithValue("@altura", cliente.AlturaCliente);
                     command.Parameters.AddWithValue("@idEntrenador", cliente.IdEntrenador);
                     command.Parameters.AddWithValue("@idCliente", cliente.IdClientes);
+                    command.Parameters.AddWithValue("@activo", true);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace PresentacionFinal
 {
@@ -54,25 +47,8 @@ namespace PresentacionFinal
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void PanelSubMenuReporte_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        //private void BotonReportes_Click(object sender, EventArgs e)
-        //{
-        //    PanelSubMenuReporte.Visible = true;    
-        //}
-
-        //private void BotonReporteMensualidad_Click(object sender, EventArgs e)
-        //{
-        //    PanelSubMenuReporte.Visible = false;
-        //}
-
-        //private void BotonReporteCliente_Click(object sender, EventArgs e)
-        //{
-        //    PanelSubMenuReporte.Visible = false;
-        //}
         private void AbrirFormularioHijo(object formHijo)
         {
             if (this.PanelContenedor.Controls.Count > 0)
@@ -149,7 +125,7 @@ namespace PresentacionFinal
 
         private void BotonPagos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FrmPagoCliente());
+            AbrirFormularioHijo(new FrmControlActivos());
             OcultarSubmenu();
         }
 
