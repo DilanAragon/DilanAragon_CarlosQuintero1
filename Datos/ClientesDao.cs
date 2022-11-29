@@ -98,7 +98,7 @@
                 PesoCliente = (decimal)reader.GetDecimal(6),
                 AlturaCliente = (decimal)reader.GetDecimal(7),
                 IdEntrenador = (int)reader.GetInt32(11),
-                Edad = reader.GetInt32(12),
+                Edad = (int)reader.GetInt32(12),
             };
         }
 

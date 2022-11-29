@@ -16,7 +16,7 @@
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conecction;
-                    command.CommandText = "Insert into Entrenadors (Identificacion,Nombre,Apellido,Telefono,Correo,Activo,FechaReg,) values" +
+                    command.CommandText = "Insert into Entrenadores (Identificacion,Nombre,Apellido,Telefono,Correo,Activo,FechaReg) values" +
                         "(@identificacion,@nombre,@apellido,@telefono,@correo,@activo,@fechaReg)";
                     command.Parameters.AddWithValue("@identificacion", entrenador.Identificacion);
                     command.Parameters.AddWithValue("@nombre", entrenador.Nombre);
@@ -107,7 +107,6 @@
                     command.CommandText = "Update  Entrenadores set Nombre=@nombre,Apellido=@apellido,Telefono=@telefono,Correo=@correo";
                     command.Parameters.AddWithValue("@nombre", entrenadores.Nombre);
                     command.Parameters.AddWithValue("@apellido", entrenadores.Apellido);
-                    command.Parameters.AddWithValue("@Edad", entrenadores.Edad);
                     command.Parameters.AddWithValue("@telefono", entrenadores.Telefono);
                     command.Parameters.AddWithValue("@correo", entrenadores.Correo);
                     command.CommandType = CommandType.Text;

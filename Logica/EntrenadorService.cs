@@ -19,10 +19,10 @@
                 bool response = entrenadorDao.GetEntrenadorByIdentificacion(entrenador.Identificacion.Trim());
                 if (response)
                 {
-                    return $"El cliente con identificacion {entrenador.Identificacion} ya se encuentra registrado";
+                    return $"El Entrenador con identificacion {entrenador.Identificacion} ya se encuentra registrado";
                 }
                 entrenadorDao.SaveEntrenador(entrenador);
-                return "Cliente registrado con exito";
+                return "Entrenador registrado con exito";
             }
             catch (Exception e)
             {

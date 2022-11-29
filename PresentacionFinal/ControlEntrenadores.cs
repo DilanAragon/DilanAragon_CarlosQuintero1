@@ -27,7 +27,6 @@ namespace PresentacionFinal
             };
             var msj = entrenadorService.SaveEntrenador(entrenador);
             MessageBox.Show(msj, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            return;
         }
         private void LimpiarDatos()
         {
