@@ -14,11 +14,11 @@ namespace PresentacionFinal
 {
     public partial class ControlEntrenadores : Form
     {
-        readonly ServicioRegistroEntrenadores sistemaRegistroEntrenadores;
+        
         public ControlEntrenadores()
         {
             InitializeComponent();
-            sistemaRegistroEntrenadores = new ServicioRegistroEntrenadores();
+
         }
         void Guardar()
         {
@@ -27,10 +27,8 @@ namespace PresentacionFinal
                 Nombre = (txtNameTrainer.Text),
                 Correo = txtMailTrainer.Text,
                 Telefono = txtPhoneTrainer.Text,
-                //CodigoEntrenador = Convert.ToInt32(txtCode.Text),
             };
-            var msj = sistemaRegistroEntrenadores.Save(entrenador);
-            MessageBox.Show(msj);
+
 
         }
         private void LimpiarDatos()
