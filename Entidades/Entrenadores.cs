@@ -8,14 +8,14 @@ namespace Entidades
 {
     public class Entrenadores : Persona
     {
-        public int CodigoEntrenador { get; set; }
+        public int IdEntrenador { get; set; }
         public Entrenadores()
         {
 
         }
         public override string ToString()
         {
-            return $"{Nombre};{Telefono};{Correo};{CodigoEntrenador}";
+            return $"{Nombre};{Telefono};{Correo}";
         }
     }
 }

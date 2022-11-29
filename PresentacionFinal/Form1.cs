@@ -89,20 +89,17 @@ namespace PresentacionFinal
         {
             BotonSubMenuAñadir.Visible= false;
             BotonSubMenuAñadirTrainer.Visible= false;
-            BotonSubMenuBuscar.Visible= false;
-            BotonSubMenuBuscarTrainer.Visible= false;
+            
         }
         private void OcultarSubmenu()
         {
             if(BotonClientes.Visible==true)
                 BotonSubMenuAñadir.Visible= true;
-                BotonSubMenuBuscar.Visible= true;
             if(BotonEntrenadores.Visible==true)
-                BotonSubMenuBuscarTrainer.Visible= true;
                 BotonSubMenuAñadirTrainer.Visible = true;
             if(BotonReportes.Visible==true)
                 BotonSubMenuReporteIngreso.Visible= true;
-                BotonSubMenuHistorialUsuario.Visible= true;
+                
         }
         private void MostrarSubMenu(Panel SubMenu)
         {
@@ -131,7 +128,7 @@ namespace PresentacionFinal
 
         private void BotonSubMenuAñadir_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new ControlClientes());
+            AbrirFormularioHijo(new FrmClientes());
             OcultarSubmenu();
         }
 
@@ -156,5 +153,17 @@ namespace PresentacionFinal
             AbrirFormularioHijo(new ControlEntrenadores());
             OcultarSubmenu();
         }
+
+        private void BotonPagos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

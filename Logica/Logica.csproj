@@ -41,10 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PresentacionCP.cs" />
-    <Compile Include="ServicioRegistroClientes.cs" />
+    <Compile Include="ClientService.cs" />
+    <Compile Include="EntrenadorService.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioRegistroClientes.cs" />
     <Compile Include="ServicioRegistroEntrenadores.cs" />
   </ItemGroup>
   <ItemGroup>

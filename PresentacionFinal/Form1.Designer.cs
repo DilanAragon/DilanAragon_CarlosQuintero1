@@ -39,18 +39,22 @@
             this.BotonClientes = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelSubMenuMedios = new System.Windows.Forms.Panel();
-            this.BotonSubMenuBuscar = new System.Windows.Forms.Button();
             this.BotonSubMenuAñadir = new System.Windows.Forms.Button();
             this.BotonEntrenadores = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.PanelSubMedioTrainer = new System.Windows.Forms.Panel();
-            this.BotonSubMenuBuscarTrainer = new System.Windows.Forms.Button();
             this.BotonSubMenuAñadirTrainer = new System.Windows.Forms.Button();
             this.BotonReportes = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.PanelSubMedioReporte = new System.Windows.Forms.Panel();
-            this.BotonSubMenuHistorialUsuario = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.BotonSubMenuReporteIngreso = new System.Windows.Forms.Button();
+            this.BotonPagos = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonMaxVentana)).BeginInit();
@@ -60,8 +64,11 @@
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.PanelSubMenuMedios.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.PanelSubMedioTrainer.SuspendLayout();
             this.PanelSubMedioReporte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -147,6 +154,10 @@
             this.MenuVertical.Controls.Add(this.BotonReportes);
             this.MenuVertical.Controls.Add(this.panel4);
             this.MenuVertical.Controls.Add(this.PanelSubMedioReporte);
+            this.MenuVertical.Controls.Add(this.BotonPagos);
+            this.MenuVertical.Controls.Add(this.panel6);
+            this.MenuVertical.Controls.Add(this.pictureBox1);
+            this.MenuVertical.Controls.Add(this.panel3);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.MenuVertical.Location = new System.Drawing.Point(0, 38);
@@ -199,31 +210,13 @@
             // PanelSubMenuMedios
             // 
             this.PanelSubMenuMedios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelSubMenuMedios.Controls.Add(this.BotonSubMenuBuscar);
             this.PanelSubMenuMedios.Controls.Add(this.BotonSubMenuAñadir);
             this.PanelSubMenuMedios.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSubMenuMedios.Location = new System.Drawing.Point(11, 173);
             this.PanelSubMenuMedios.Name = "PanelSubMenuMedios";
-            this.PanelSubMenuMedios.Size = new System.Drawing.Size(210, 82);
+            this.PanelSubMenuMedios.Size = new System.Drawing.Size(210, 45);
             this.PanelSubMenuMedios.TabIndex = 3;
             this.PanelSubMenuMedios.Visible = false;
-            // 
-            // BotonSubMenuBuscar
-            // 
-            this.BotonSubMenuBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonSubMenuBuscar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonSubMenuBuscar.FlatAppearance.BorderSize = 0;
-            this.BotonSubMenuBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.BotonSubMenuBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonSubMenuBuscar.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BotonSubMenuBuscar.Location = new System.Drawing.Point(0, 40);
-            this.BotonSubMenuBuscar.Name = "BotonSubMenuBuscar";
-            this.BotonSubMenuBuscar.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.BotonSubMenuBuscar.Size = new System.Drawing.Size(210, 40);
-            this.BotonSubMenuBuscar.TabIndex = 1;
-            this.BotonSubMenuBuscar.Text = "BUSCAR";
-            this.BotonSubMenuBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonSubMenuBuscar.UseVisualStyleBackColor = true;
             // 
             // BotonSubMenuAñadir
             // 
@@ -253,7 +246,7 @@
             this.BotonEntrenadores.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonEntrenadores.Image = ((System.Drawing.Image)(resources.GetObject("BotonEntrenadores.Image")));
             this.BotonEntrenadores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonEntrenadores.Location = new System.Drawing.Point(30, 261);
+            this.BotonEntrenadores.Location = new System.Drawing.Point(30, 224);
             this.BotonEntrenadores.Name = "BotonEntrenadores";
             this.BotonEntrenadores.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BotonEntrenadores.Size = new System.Drawing.Size(191, 34);
@@ -265,38 +258,30 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.panel2.Location = new System.Drawing.Point(14, 261);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Location = new System.Drawing.Point(14, 224);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 32);
             this.panel2.TabIndex = 11;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(10, 32);
+            this.panel5.TabIndex = 12;
+            // 
             // PanelSubMedioTrainer
             // 
             this.PanelSubMedioTrainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelSubMedioTrainer.Controls.Add(this.BotonSubMenuBuscarTrainer);
             this.PanelSubMedioTrainer.Controls.Add(this.BotonSubMenuAñadirTrainer);
             this.PanelSubMedioTrainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSubMedioTrainer.Location = new System.Drawing.Point(11, 301);
+            this.PanelSubMedioTrainer.Location = new System.Drawing.Point(11, 264);
             this.PanelSubMedioTrainer.Name = "PanelSubMedioTrainer";
-            this.PanelSubMedioTrainer.Size = new System.Drawing.Size(210, 82);
+            this.PanelSubMedioTrainer.Size = new System.Drawing.Size(210, 43);
             this.PanelSubMedioTrainer.TabIndex = 12;
             this.PanelSubMedioTrainer.Visible = false;
-            // 
-            // BotonSubMenuBuscarTrainer
-            // 
-            this.BotonSubMenuBuscarTrainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonSubMenuBuscarTrainer.FlatAppearance.BorderSize = 0;
-            this.BotonSubMenuBuscarTrainer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.BotonSubMenuBuscarTrainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonSubMenuBuscarTrainer.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BotonSubMenuBuscarTrainer.Location = new System.Drawing.Point(0, 40);
-            this.BotonSubMenuBuscarTrainer.Name = "BotonSubMenuBuscarTrainer";
-            this.BotonSubMenuBuscarTrainer.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.BotonSubMenuBuscarTrainer.Size = new System.Drawing.Size(210, 40);
-            this.BotonSubMenuBuscarTrainer.TabIndex = 1;
-            this.BotonSubMenuBuscarTrainer.Text = "BUSCAR";
-            this.BotonSubMenuBuscarTrainer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonSubMenuBuscarTrainer.UseVisualStyleBackColor = true;
             // 
             // BotonSubMenuAñadirTrainer
             // 
@@ -325,7 +310,7 @@
             this.BotonReportes.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonReportes.Image = ((System.Drawing.Image)(resources.GetObject("BotonReportes.Image")));
             this.BotonReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonReportes.Location = new System.Drawing.Point(30, 389);
+            this.BotonReportes.Location = new System.Drawing.Point(30, 313);
             this.BotonReportes.Name = "BotonReportes";
             this.BotonReportes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BotonReportes.Size = new System.Drawing.Size(191, 34);
@@ -337,7 +322,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.panel4.Location = new System.Drawing.Point(14, 389);
+            this.panel4.Location = new System.Drawing.Point(14, 313);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 32);
             this.panel4.TabIndex = 14;
@@ -345,30 +330,32 @@
             // PanelSubMedioReporte
             // 
             this.PanelSubMedioReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.PanelSubMedioReporte.Controls.Add(this.BotonSubMenuHistorialUsuario);
+            this.PanelSubMedioReporte.Controls.Add(this.button3);
             this.PanelSubMedioReporte.Controls.Add(this.BotonSubMenuReporteIngreso);
             this.PanelSubMedioReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSubMedioReporte.Location = new System.Drawing.Point(11, 429);
+            this.PanelSubMedioReporte.Location = new System.Drawing.Point(11, 353);
             this.PanelSubMedioReporte.Name = "PanelSubMedioReporte";
-            this.PanelSubMedioReporte.Size = new System.Drawing.Size(210, 82);
+            this.PanelSubMedioReporte.Size = new System.Drawing.Size(210, 43);
             this.PanelSubMedioReporte.TabIndex = 15;
             this.PanelSubMedioReporte.Visible = false;
             // 
-            // BotonSubMenuHistorialUsuario
+            // button3
             // 
-            this.BotonSubMenuHistorialUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BotonSubMenuHistorialUsuario.FlatAppearance.BorderSize = 0;
-            this.BotonSubMenuHistorialUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
-            this.BotonSubMenuHistorialUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonSubMenuHistorialUsuario.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
-            this.BotonSubMenuHistorialUsuario.Location = new System.Drawing.Point(0, 40);
-            this.BotonSubMenuHistorialUsuario.Name = "BotonSubMenuHistorialUsuario";
-            this.BotonSubMenuHistorialUsuario.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.BotonSubMenuHistorialUsuario.Size = new System.Drawing.Size(210, 40);
-            this.BotonSubMenuHistorialUsuario.TabIndex = 1;
-            this.BotonSubMenuHistorialUsuario.Text = "HISTORIAL CRECIMIENTO";
-            this.BotonSubMenuHistorialUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonSubMenuHistorialUsuario.UseVisualStyleBackColor = true;
+            this.button3.AllowDrop = true;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(25, 219);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button3.Size = new System.Drawing.Size(191, 34);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "REPORTES";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // BotonSubMenuReporteIngreso
             // 
@@ -385,6 +372,72 @@
             this.BotonSubMenuReporteIngreso.Text = "REPORTE INGRESO";
             this.BotonSubMenuReporteIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonSubMenuReporteIngreso.UseVisualStyleBackColor = true;
+            // 
+            // BotonPagos
+            // 
+            this.BotonPagos.AllowDrop = true;
+            this.BotonPagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonPagos.FlatAppearance.BorderSize = 0;
+            this.BotonPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.BotonPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonPagos.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonPagos.Image = ((System.Drawing.Image)(resources.GetObject("BotonPagos.Image")));
+            this.BotonPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonPagos.Location = new System.Drawing.Point(30, 402);
+            this.BotonPagos.Name = "BotonPagos";
+            this.BotonPagos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BotonPagos.Size = new System.Drawing.Size(191, 34);
+            this.BotonPagos.TabIndex = 16;
+            this.BotonPagos.Text = "PAGOS";
+            this.BotonPagos.UseVisualStyleBackColor = true;
+            this.BotonPagos.Click += new System.EventHandler(this.BotonPagos_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.panel6.Location = new System.Drawing.Point(14, 402);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 32);
+            this.panel6.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(172, 442);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(11, 483);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(210, 46);
+            this.panel3.TabIndex = 18;
+            this.panel3.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(132)))), ((int)(((byte)(146)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 9.75F);
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(210, 40);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "AÑADIR";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // PanelContenedor
             // 
@@ -415,8 +468,11 @@
             this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             this.PanelSubMenuMedios.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.PanelSubMedioTrainer.ResumeLayout(false);
             this.PanelSubMedioReporte.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,16 +493,20 @@
         private System.Windows.Forms.Button BotonEntrenadores;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel PanelSubMenuMedios;
-        private System.Windows.Forms.Button BotonSubMenuBuscar;
         private System.Windows.Forms.Button BotonSubMenuAñadir;
         private System.Windows.Forms.Panel PanelSubMedioTrainer;
-        private System.Windows.Forms.Button BotonSubMenuBuscarTrainer;
         private System.Windows.Forms.Button BotonSubMenuAñadirTrainer;
         private System.Windows.Forms.Button BotonReportes;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel PanelSubMedioReporte;
-        private System.Windows.Forms.Button BotonSubMenuHistorialUsuario;
         private System.Windows.Forms.Button BotonSubMenuReporteIngreso;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BotonPagos;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
     }
 }
 

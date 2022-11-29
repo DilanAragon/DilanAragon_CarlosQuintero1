@@ -31,8 +31,8 @@ namespace Logica
         }
         public string Edit(Entrenadores oldRegistro, Entrenadores UpdateRegistro)
         {
-            oldRegistro.Id = UpdateRegistro.Id;
-            oldRegistro.CodigoEntrenador = UpdateRegistro.CodigoEntrenador;
+            //oldRegistro.Id = UpdateRegistro.Id;
+            //oldRegistro.CodigoEntrenador = UpdateRegistro.CodigoEntrenador;
             oldRegistro.Nombre = UpdateRegistro.Nombre;
             oldRegistro.Telefono = UpdateRegistro.Telefono;
             oldRegistro.Correo = UpdateRegistro.Correo;
@@ -58,10 +58,10 @@ namespace Logica
         {
             foreach (var item in entrenadoresl)
             {
-                if ( item.CodigoEntrenador == id)
-                {
-                    return item;
-                }
+                //if ( item.CodigoEntrenador == id)
+                //{
+                //    return item;
+                //}
             }
             return null;
         }
@@ -82,10 +82,10 @@ namespace Logica
         {
 
 
-            if (GetById(registro.CodigoEntrenador) != null)
-            {
-                return $"el entrenador ya existe con este codigo {registro.CodigoEntrenador}";
-            }
+            //if (GetById(registro.CodigoEntrenador) != null)
+            //{
+            //    return $"el entrenador ya existe con este codigo {registro.CodigoEntrenador}";
+            //}
             var estado = repositorioRegistroEntrenadores.Guardar(registro);
 
             Refresh();

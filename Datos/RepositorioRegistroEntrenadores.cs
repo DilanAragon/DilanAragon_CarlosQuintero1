@@ -40,11 +40,11 @@ namespace Datos
             try
             {
                 var registro = new Entrenadores();
-                registro.Id = (linea.Split(';')[0]);
+               // registro.Id = (linea.Split(';')[0]);
                 registro.Nombre = (linea.Split(';')[1]);
                 registro.Telefono = (linea.Split(';')[2]);
                 registro.Correo = (linea.Split(';')[3]);
-                registro.CodigoEntrenador = int.Parse(linea.Split(';')[4]);
+               // registro.CodigoEntrenador = int.Parse(linea.Split(';')[4]);
                 
 
                 return registro;

@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Datos
 {
@@ -41,13 +38,13 @@ namespace Datos
             try
             {
                 var registro = new Clientes();
-                registro.Id = (linea.Split('|')[0]);
+               
                 registro.Nombre = (linea.Split('|')[1]);
                 registro.AlturaCliente = int.Parse(linea.Split('|')[2]);
                 registro.PesoCliente = int.Parse(linea.Split('|')[3]);
                 registro.Telefono = (linea.Split('|')[4]);
                 registro.Correo = (linea.Split('|')[5]);
-                registro.Mensualidad = int.Parse(linea.Split('|')[6]);
+                
                 return registro;
 
             }
@@ -58,10 +55,7 @@ namespace Datos
 
         }
 
-        /* public string Save(Familiar contacto)
-         {
-             throw new NotImplementedException();
-         }*/
+       
 
         public bool Update(List<Clientes> registro)
         {

@@ -42,15 +42,19 @@
             this.TxtPhone = new System.Windows.Forms.TextBox();
             this.LbEntrenador = new System.Windows.Forms.Label();
             this.LbPhone = new System.Windows.Forms.Label();
-            this.LbMensualidad = new System.Windows.Forms.Label();
             this.TxtMail = new System.Windows.Forms.TextBox();
-            this.TxtPay = new System.Windows.Forms.TextBox();
-            this.TxtTrainer = new System.Windows.Forms.TextBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BotonCerrar = new System.Windows.Forms.PictureBox();
+            this.cmbEntrenadores = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,7 +108,7 @@
             this.LbAltura.AutoSize = true;
             this.LbAltura.BackColor = System.Drawing.Color.Transparent;
             this.LbAltura.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbAltura.Location = new System.Drawing.Point(341, 337);
+            this.LbAltura.Location = new System.Drawing.Point(343, 365);
             this.LbAltura.Name = "LbAltura";
             this.LbAltura.Size = new System.Drawing.Size(50, 13);
             this.LbAltura.TabIndex = 5;
@@ -112,7 +116,7 @@
             // 
             // TxtAltura
             // 
-            this.TxtAltura.Location = new System.Drawing.Point(626, 330);
+            this.TxtAltura.Location = new System.Drawing.Point(628, 358);
             this.TxtAltura.Name = "TxtAltura";
             this.TxtAltura.Size = new System.Drawing.Size(68, 20);
             this.TxtAltura.TabIndex = 6;
@@ -122,7 +126,7 @@
             this.LbPeso.AutoSize = true;
             this.LbPeso.BackColor = System.Drawing.Color.Transparent;
             this.LbPeso.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbPeso.Location = new System.Drawing.Point(343, 371);
+            this.LbPeso.Location = new System.Drawing.Point(345, 399);
             this.LbPeso.Name = "LbPeso";
             this.LbPeso.Size = new System.Drawing.Size(36, 13);
             this.LbPeso.TabIndex = 7;
@@ -130,7 +134,7 @@
             // 
             // TxtPeso
             // 
-            this.TxtPeso.Location = new System.Drawing.Point(626, 364);
+            this.TxtPeso.Location = new System.Drawing.Point(628, 392);
             this.TxtPeso.Name = "TxtPeso";
             this.TxtPeso.Size = new System.Drawing.Size(68, 20);
             this.TxtPeso.TabIndex = 8;
@@ -140,16 +144,15 @@
             this.LbMail.AutoSize = true;
             this.LbMail.BackColor = System.Drawing.Color.Transparent;
             this.LbMail.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbMail.Location = new System.Drawing.Point(343, 244);
+            this.LbMail.Location = new System.Drawing.Point(343, 270);
             this.LbMail.Name = "LbMail";
             this.LbMail.Size = new System.Drawing.Size(53, 13);
             this.LbMail.TabIndex = 9;
             this.LbMail.Text = "CORREO";
-            this.LbMail.Click += new System.EventHandler(this.label6_Click);
             // 
             // TxtPhone
             // 
-            this.TxtPhone.Location = new System.Drawing.Point(459, 205);
+            this.TxtPhone.Location = new System.Drawing.Point(459, 231);
             this.TxtPhone.Name = "TxtPhone";
             this.TxtPhone.Size = new System.Drawing.Size(235, 20);
             this.TxtPhone.TabIndex = 10;
@@ -159,7 +162,7 @@
             this.LbEntrenador.AutoSize = true;
             this.LbEntrenador.BackColor = System.Drawing.Color.Transparent;
             this.LbEntrenador.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbEntrenador.Location = new System.Drawing.Point(341, 276);
+            this.LbEntrenador.Location = new System.Drawing.Point(341, 302);
             this.LbEntrenador.Name = "LbEntrenador";
             this.LbEntrenador.Size = new System.Drawing.Size(83, 13);
             this.LbEntrenador.TabIndex = 11;
@@ -170,44 +173,18 @@
             this.LbPhone.AutoSize = true;
             this.LbPhone.BackColor = System.Drawing.Color.Transparent;
             this.LbPhone.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbPhone.Location = new System.Drawing.Point(343, 212);
+            this.LbPhone.Location = new System.Drawing.Point(343, 238);
             this.LbPhone.Name = "LbPhone";
             this.LbPhone.Size = new System.Drawing.Size(64, 13);
             this.LbPhone.TabIndex = 12;
             this.LbPhone.Text = "TELEFONO";
             // 
-            // LbMensualidad
-            // 
-            this.LbMensualidad.AutoSize = true;
-            this.LbMensualidad.BackColor = System.Drawing.Color.Transparent;
-            this.LbMensualidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbMensualidad.Location = new System.Drawing.Point(343, 305);
-            this.LbMensualidad.Name = "LbMensualidad";
-            this.LbMensualidad.Size = new System.Drawing.Size(85, 13);
-            this.LbMensualidad.TabIndex = 13;
-            this.LbMensualidad.Text = "MENSUALIDAD";
-            // 
             // TxtMail
             // 
-            this.TxtMail.Location = new System.Drawing.Point(459, 237);
+            this.TxtMail.Location = new System.Drawing.Point(459, 263);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(235, 20);
             this.TxtMail.TabIndex = 14;
-            this.TxtMail.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // TxtPay
-            // 
-            this.TxtPay.Location = new System.Drawing.Point(583, 298);
-            this.TxtPay.Name = "TxtPay";
-            this.TxtPay.Size = new System.Drawing.Size(111, 20);
-            this.TxtPay.TabIndex = 15;
-            // 
-            // TxtTrainer
-            // 
-            this.TxtTrainer.Location = new System.Drawing.Point(459, 269);
-            this.TxtTrainer.Name = "TxtTrainer";
-            this.TxtTrainer.Size = new System.Drawing.Size(235, 20);
-            this.TxtTrainer.TabIndex = 16;
             // 
             // BtnGuardar
             // 
@@ -221,7 +198,7 @@
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(459, 427);
+            this.BtnGuardar.Location = new System.Drawing.Point(525, 25);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BtnGuardar.Size = new System.Drawing.Size(146, 36);
@@ -234,6 +211,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.BtnGuardar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 476);
             this.panel1.Name = "panel1";
@@ -251,19 +229,79 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(459, 205);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(235, 20);
+            this.txtApellido.TabIndex = 28;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(343, 208);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "APELLIDOS";
+            // 
+            // BotonCerrar
+            // 
+            this.BotonCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BotonCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BotonCerrar.Image")));
+            this.BotonCerrar.Location = new System.Drawing.Point(1015, 12);
+            this.BotonCerrar.Name = "BotonCerrar";
+            this.BotonCerrar.Size = new System.Drawing.Size(25, 25);
+            this.BotonCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BotonCerrar.TabIndex = 29;
+            this.BotonCerrar.TabStop = false;
+            this.BotonCerrar.Click += new System.EventHandler(this.BotonCerrar_Click);
+            // 
+            // cmbEntrenadores
+            // 
+            this.cmbEntrenadores.FormattingEnabled = true;
+            this.cmbEntrenadores.Location = new System.Drawing.Point(459, 293);
+            this.cmbEntrenadores.Name = "cmbEntrenadores";
+            this.cmbEntrenadores.Size = new System.Drawing.Size(235, 21);
+            this.cmbEntrenadores.TabIndex = 30;
+            this.cmbEntrenadores.SelectedIndexChanged += new System.EventHandler(this.cmbEntrenadores_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(628, 326);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(68, 20);
+            this.textBox1.TabIndex = 32;
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.AutoSize = true;
+            this.txtEdad.BackColor = System.Drawing.Color.Transparent;
+            this.txtEdad.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtEdad.Location = new System.Drawing.Point(343, 333);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(37, 13);
+            this.txtEdad.TabIndex = 31;
+            this.txtEdad.Text = "EDAD";
+            // 
             // ControlClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1052, 561);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEdad);
+            this.Controls.Add(this.cmbEntrenadores);
+            this.Controls.Add(this.BotonCerrar);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.BtnGuardar);
-            this.Controls.Add(this.TxtTrainer);
-            this.Controls.Add(this.TxtPay);
             this.Controls.Add(this.TxtMail);
-            this.Controls.Add(this.LbMensualidad);
             this.Controls.Add(this.LbPhone);
             this.Controls.Add(this.LbEntrenador);
             this.Controls.Add(this.TxtPhone);
@@ -278,9 +316,11 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ControlClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ControlClientes";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,12 +341,15 @@
         private System.Windows.Forms.TextBox TxtPhone;
         private System.Windows.Forms.Label LbEntrenador;
         private System.Windows.Forms.Label LbPhone;
-        private System.Windows.Forms.Label LbMensualidad;
         private System.Windows.Forms.TextBox TxtMail;
-        private System.Windows.Forms.TextBox TxtPay;
-        private System.Windows.Forms.TextBox TxtTrainer;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox BotonCerrar;
+        private System.Windows.Forms.ComboBox cmbEntrenadores;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label txtEdad;
     }
 }

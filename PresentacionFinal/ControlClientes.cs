@@ -1,13 +1,6 @@
 ﻿using Entidades;
 using Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentacionFinal
@@ -16,36 +9,46 @@ namespace PresentacionFinal
 
     {
         readonly ServicioRegistroClientes sistemaRegistroClientes;
+        readonly ClientService clientService;
+        readonly EntrenadorService entrenadorService;
+        int idEntrenador = 0;
         public ControlClientes()
         {
             InitializeComponent();
+            clientService= new ClientService();
             sistemaRegistroClientes = new ServicioRegistroClientes();
+            entrenadorService= new EntrenadorService();
+            LoadEntrenadores();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void LoadEntrenadores()
         {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            var lista = entrenadorService.GetClientes();
+            foreach (var item in lista)
+            {
+                cmbEntrenadores.Items.Add(item.IdEntrenador + " - " +item.Nombre.Trim() + " " + item.Apellido.Trim());
+            }
         }
         void Guardar()
         {
-            var cliente = new Clientes()
+            if (idEntrenador != 0)
             {
-                Nombre = (TxtName.Text),
-                AlturaCliente = Convert.ToInt32(TxtAltura.Text),
-                PesoCliente = Convert.ToInt32(TxtPeso.Text),
-                Id = (TxtId.Text),
-                Correo = TxtMail.Text,
-                Telefono = TxtPhone.Text,
-                Mensualidad=Convert.ToInt32(TxtPay.Text),
-
-            };
-            var msj = sistemaRegistroClientes.Save(cliente);
-            MessageBox.Show(msj);
+                var cliente = new Clientes()
+                {
+                    Nombre = (TxtName.Text),
+                    Apellido = txtApellido.Text,
+                    AlturaCliente = string.IsNullOrEmpty(TxtAltura.Text) ? 0 : Convert.ToDecimal(TxtAltura.Text),
+                    PesoCliente = string.IsNullOrEmpty(TxtPeso.Text) ? 0 : Convert.ToDecimal(TxtPeso.Text),
+                    Correo = TxtMail.Text,
+                    Telefono = TxtPhone.Text,
+                    IdEntrenador = Convert.ToInt32(idEntrenador),
+                    Identificacion = TxtId.Text,
+                };
+                var msj = clientService.SaveClient(cliente);
+                MessageBox.Show(msj, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Seleccione Un Entrenador Para Continuar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
         private void LimpiarDatos()
@@ -56,13 +59,28 @@ namespace PresentacionFinal
             TxtPeso.Text = String.Empty;
             TxtPhone.Text = String.Empty;
             TxtMail.Text = String.Empty;
-            TxtPay.Text = String.Empty;
-            TxtTrainer.Text = String.Empty;
+            txtApellido.Text = String.Empty;
+            cmbEntrenadores.Text = String.Empty;
         }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             Guardar();
             LimpiarDatos();
         }
+
+        private void BotonCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cmbEntrenadores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var texto = cmbEntrenadores.Text;
+            var position = texto.IndexOf('-');
+            idEntrenador = Convert.ToInt32(texto.Substring(0, position));
+
+        }
+
+        
     }
 }

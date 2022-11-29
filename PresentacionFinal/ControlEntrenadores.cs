@@ -27,7 +27,7 @@ namespace PresentacionFinal
                 Nombre = (txtNameTrainer.Text),
                 Correo = txtMailTrainer.Text,
                 Telefono = txtPhoneTrainer.Text,
-                CodigoEntrenador = Convert.ToInt32(txtCode.Text),
+                //CodigoEntrenador = Convert.ToInt32(txtCode.Text),
             };
             var msj = sistemaRegistroEntrenadores.Save(entrenador);
             MessageBox.Show(msj);
