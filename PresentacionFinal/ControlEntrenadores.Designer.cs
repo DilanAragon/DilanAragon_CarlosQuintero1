@@ -36,11 +36,13 @@
             this.txtNameTrainer = new System.Windows.Forms.TextBox();
             this.LbName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txtIdentification = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +85,7 @@
             // 
             // txtNameTrainer
             // 
-            this.txtNameTrainer.Location = new System.Drawing.Point(458, 298);
+            this.txtNameTrainer.Location = new System.Drawing.Point(458, 272);
             this.txtNameTrainer.Name = "txtNameTrainer";
             this.txtNameTrainer.Size = new System.Drawing.Size(235, 20);
             this.txtNameTrainer.TabIndex = 19;
@@ -93,7 +95,7 @@
             this.LbName.AutoSize = true;
             this.LbName.BackColor = System.Drawing.Color.Transparent;
             this.LbName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LbName.Location = new System.Drawing.Point(342, 305);
+            this.LbName.Location = new System.Drawing.Point(345, 279);
             this.LbName.Name = "LbName";
             this.LbName.Size = new System.Drawing.Size(61, 13);
             this.LbName.TabIndex = 18;
@@ -109,23 +111,23 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "ENTRENADORES";
             // 
-            // txtCode
+            // txtIdentification
             // 
-            this.txtCode.Location = new System.Drawing.Point(618, 269);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(75, 20);
-            this.txtCode.TabIndex = 16;
+            this.txtIdentification.Location = new System.Drawing.Point(458, 239);
+            this.txtIdentification.Name = "txtIdentification";
+            this.txtIdentification.Size = new System.Drawing.Size(235, 20);
+            this.txtIdentification.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(342, 276);
+            this.label1.Location = new System.Drawing.Point(342, 246);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 15;
-            this.label1.Text = "CODIGO";
+            this.label1.Text = "IDENTIFICACION";
             // 
             // BtnGuardar
             // 
@@ -169,12 +171,32 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(458, 298);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(235, 20);
+            this.txtLastName.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(342, 305);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "APELLIDOS";
+            // 
             // ControlEntrenadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1052, 561);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnGuardar);
@@ -184,7 +206,7 @@
             this.Controls.Add(this.LbMail);
             this.Controls.Add(this.txtNameTrainer);
             this.Controls.Add(this.LbName);
-            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtIdentification);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ControlEntrenadores";
@@ -205,10 +227,12 @@
         private System.Windows.Forms.TextBox txtNameTrainer;
         private System.Windows.Forms.Label LbName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txtIdentification;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label label3;
     }
 }

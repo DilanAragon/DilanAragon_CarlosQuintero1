@@ -15,7 +15,7 @@
                 conecction.Open();
                 using (var command = new SqlCommand())
                 {
-                    command.Connection= conecction;
+                    command.Connection = conecction;
                     command.CommandText = "Insert into Clientes (Identificacion,Nombre,Apellido,Telefono,Correo,Peso,Altura,Activo,FechaReg,IdEntrenador) values" +
                         "(@identificacion,@nombre,@apellido,@telefono,@correo,@peso,@altura,@activo,@fechaReg,@idEntrenador)";
                     command.Parameters.AddWithValue("@identificacion",cliente.Identificacion);
@@ -98,7 +98,7 @@
                 PesoCliente = (decimal)reader.GetDecimal(6),
                 AlturaCliente = (decimal)reader.GetDecimal(7),
                 IdEntrenador = (int)reader.GetInt32(11),
-
+                Edad = reader.GetInt32(12),
             };
         }
 
@@ -135,9 +135,10 @@
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conecction;
-                    command.CommandText = "Update  Clientes set Nombre=@nombre,Apellido=@apellido,Telefono=@telefono,Correo=@correo,Peso=@peso,Altura=@altura,IdEntrenador=@idEntrenador where IdCliente=@IdCliente";
+                    command.CommandText = "Update  Clientes set Nombre=@nombre,Apellido=@apellido,Edad=@Edad,Telefono=@telefono,Correo=@correo,Peso=@peso,Altura=@altura,IdEntrenador=@idEntrenador where IdCliente=@IdCliente";
                     command.Parameters.AddWithValue("@nombre", cliente.Nombre);
                     command.Parameters.AddWithValue("@apellido", cliente.Apellido);
+                    command.Parameters.AddWithValue("@Edad", cliente.Edad);
                     command.Parameters.AddWithValue("@telefono", cliente.Telefono);
                     command.Parameters.AddWithValue("@correo", cliente.Correo);
                     command.Parameters.AddWithValue("@peso", cliente.PesoCliente);

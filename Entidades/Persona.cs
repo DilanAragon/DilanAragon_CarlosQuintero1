@@ -13,6 +13,7 @@ namespace Entidades
         public string Apellido { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
+        public int Edad { get; set; }
 
         public override string ToString()
         {

@@ -41,6 +41,8 @@ namespace PresentacionFinal
                     Telefono = TxtPhone.Text,
                     IdEntrenador = Convert.ToInt32(idEntrenador),
                     Identificacion = TxtId.Text,
+                    Edad = Convert.ToInt32(txtEdad.Text),
+                    
                 };
                 var msj = clientService.SaveClient(cliente);
                 MessageBox.Show(msj, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -59,6 +61,7 @@ namespace PresentacionFinal
             TxtMail.Text = String.Empty;
             txtApellido.Text = String.Empty;
             cmbEntrenadores.Text = String.Empty;
+            txtEdad.Text= String.Empty;
         }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
@@ -79,6 +82,6 @@ namespace PresentacionFinal
 
         }
 
-        
+     
     }
 }

@@ -50,8 +50,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.BotonCerrar = new System.Windows.Forms.PictureBox();
             this.cmbEntrenadores = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtEdad = new System.Windows.Forms.Label();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.lblEdad = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonCerrar)).BeginInit();
@@ -269,23 +269,23 @@
             this.cmbEntrenadores.TabIndex = 30;
             this.cmbEntrenadores.SelectedIndexChanged += new System.EventHandler(this.cmbEntrenadores_SelectedIndexChanged);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(628, 326);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 32;
-            // 
             // txtEdad
             // 
-            this.txtEdad.AutoSize = true;
-            this.txtEdad.BackColor = System.Drawing.Color.Transparent;
-            this.txtEdad.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtEdad.Location = new System.Drawing.Point(343, 333);
+            this.txtEdad.Location = new System.Drawing.Point(628, 326);
             this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(37, 13);
-            this.txtEdad.TabIndex = 31;
-            this.txtEdad.Text = "EDAD";
+            this.txtEdad.Size = new System.Drawing.Size(68, 20);
+            this.txtEdad.TabIndex = 32;
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.BackColor = System.Drawing.Color.Transparent;
+            this.lblEdad.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblEdad.Location = new System.Drawing.Point(343, 333);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(37, 13);
+            this.lblEdad.TabIndex = 31;
+            this.lblEdad.Text = "EDAD";
             // 
             // ControlClientes
             // 
@@ -293,8 +293,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1052, 561);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtEdad);
+            this.Controls.Add(this.lblEdad);
             this.Controls.Add(this.cmbEntrenadores);
             this.Controls.Add(this.BotonCerrar);
             this.Controls.Add(this.txtApellido);
@@ -349,7 +349,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox BotonCerrar;
         private System.Windows.Forms.ComboBox cmbEntrenadores;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label txtEdad;
+        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.Label lblEdad;
     }
 }
