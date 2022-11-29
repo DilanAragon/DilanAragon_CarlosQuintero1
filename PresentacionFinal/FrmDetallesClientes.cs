@@ -1,10 +1,7 @@
 ﻿using Entidades;
 using Logica;
 using System;
-using System.Data;
 using System.Windows.Forms;
-using System.Windows.Interop;
-using System.Xml.Linq;
 
 namespace PresentacionFinal
 {
@@ -58,6 +55,7 @@ namespace PresentacionFinal
                     Correo = txtEmail.Text,
                     Telefono = txtTelephone.Text,
                     IdEntrenador = Convert.ToInt32(idEntrenador),
+
                     Identificacion = txtIdentificacion.Text,
                     IdClientes = Convert.ToInt32(txtIdCliente.Text),
                 };

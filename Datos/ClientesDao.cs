@@ -16,8 +16,8 @@
                 using (var command = new SqlCommand())
                 {
                     command.Connection = conecction;
-                    command.CommandText = "Insert into Clientes (Identificacion,Nombre,Apellido,Telefono,Correo,Peso,Altura,Activo,FechaReg,IdEntrenador) values" +
-                        "(@identificacion,@nombre,@apellido,@telefono,@correo,@peso,@altura,@activo,@fechaReg,@idEntrenador)";
+                    command.CommandText = "Insert into Clientes (Identificacion,Nombre,Apellido,Telefono,Correo,Peso,Altura,Activo,FechaReg,IdEntrenador,Edad) values" +
+                        "(@identificacion,@nombre,@apellido,@telefono,@correo,@peso,@altura,@activo,@fechaReg,@idEntrenador,@edad)";
                     command.Parameters.AddWithValue("@identificacion",cliente.Identificacion);
                     command.Parameters.AddWithValue("@nombre", cliente.Nombre);
                     command.Parameters.AddWithValue("@apellido", cliente.Apellido);
@@ -28,6 +28,7 @@
                     command.Parameters.AddWithValue("@activo", true);
                     command.Parameters.AddWithValue("@fechaReg", DateTime.Now);
                     command.Parameters.AddWithValue("@idEntrenador", cliente.IdEntrenador);
+                    command.Parameters.AddWithValue("@edad", cliente.Edad);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }
@@ -97,7 +98,7 @@
                 Correo = reader.GetString(5),
                 PesoCliente = (decimal)reader.GetDecimal(6),
                 AlturaCliente = (decimal)reader.GetDecimal(7),
-                Activo=(bool)reader.GetBoolean(8),
+                Activo = reader.GetBoolean(8),
                 IdEntrenador = (int)reader.GetInt32(11),
                 Edad = (int)reader.GetInt32(12),
             };
