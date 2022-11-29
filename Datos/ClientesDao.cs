@@ -126,5 +126,29 @@
                 }
             }
         }
+
+        public void UpdateClient(Clientes cliente)
+        {
+            using (var conecction = GetConnection())
+            {
+                conecction.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = conecction;
+                    command.CommandText = "Update  Clientes set Nombre=@nombre,Apellido=@apellido,Telefono=@telefono,Correo=@correo,Peso=@peso,Altura=@altura,IdEntrenador=@idEntrenador where IdCliente=@IdCliente";
+                    command.Parameters.AddWithValue("@nombre", cliente.Nombre);
+                    command.Parameters.AddWithValue("@apellido", cliente.Apellido);
+                    command.Parameters.AddWithValue("@telefono", cliente.Telefono);
+                    command.Parameters.AddWithValue("@correo", cliente.Correo);
+                    command.Parameters.AddWithValue("@peso", cliente.PesoCliente);
+                    command.Parameters.AddWithValue("@altura", cliente.AlturaCliente);
+                    command.Parameters.AddWithValue("@idEntrenador", cliente.IdEntrenador);
+                    command.Parameters.AddWithValue("@idCliente", cliente.IdClientes);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+                conecction.Close();
+            }
+        }
     }
 }

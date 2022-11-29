@@ -8,7 +8,6 @@ namespace PresentacionFinal
     public partial class ControlClientes : Form
 
     {
-        readonly ServicioRegistroClientes sistemaRegistroClientes;
         readonly ClientService clientService;
         readonly EntrenadorService entrenadorService;
         int idEntrenador = 0;
@@ -16,7 +15,6 @@ namespace PresentacionFinal
         {
             InitializeComponent();
             clientService= new ClientService();
-            sistemaRegistroClientes = new ServicioRegistroClientes();
             entrenadorService= new EntrenadorService();
             LoadEntrenadores();
         }

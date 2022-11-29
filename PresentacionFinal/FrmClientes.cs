@@ -11,6 +11,7 @@
     public partial class FrmClientes : Form
     {
         readonly ClientService clientService;
+        List<Clientes> clientesGlobal = new List<Clientes>();
         public FrmClientes()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@
             if (clientes.Count() > 0)
             {
                 gridClientes.DataSource = PaintClients(clientes);
+                clientesGlobal = clientes;
             }
         }
 
@@ -73,5 +75,33 @@
             frmDetalles.ShowDialog();
         }
 
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearch.Text))
+            {
+                LoadClients();
+            }
+            else
+            {
+                LoadSearch(txtSearch.Text);
+            }
+        }
+
+        private void LoadSearch(string parametro)
+        {
+            List<Clientes> filter = clientesGlobal.Where(c => c.Identificacion.ToUpper().Contains(parametro.ToUpper()) || c.Nombre.ToUpper().Contains(parametro.ToUpper()) || c.Apellido.ToUpper().Contains(parametro.ToUpper())).ToList();
+            gridClientes.DataSource = PaintClients(filter);
+        }
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            FrmPagoCliente frmPagoCliente= new FrmPagoCliente();
+            frmPagoCliente.ShowDialog();
+        }
+
+        private void BotonCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

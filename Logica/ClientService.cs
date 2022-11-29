@@ -56,5 +56,19 @@
                 throw;
             }
         }
+
+        public string UpdateClient(Clientes cliente)
+        {
+
+            try
+            {
+                clientesDao.UpdateClient(cliente);
+                return "Cliente modificado con exito";
+            }
+            catch (Exception e)
+            {
+                return "Error: " + e.Message;
+            }
+        }
     }
 }

@@ -97,8 +97,6 @@ namespace PresentacionFinal
                 BotonSubMenuAñadir.Visible= true;
             if(BotonEntrenadores.Visible==true)
                 BotonSubMenuAñadirTrainer.Visible = true;
-            if(BotonReportes.Visible==true)
-                BotonSubMenuReporteIngreso.Visible= true;
                 
         }
         private void MostrarSubMenu(Panel SubMenu)
@@ -138,11 +136,6 @@ namespace PresentacionFinal
             
         }
 
-        private void BotonReportes_Click(object sender, EventArgs e)
-        {
-            MostrarSubMenu(PanelSubMedioReporte);
-        }
-
         private void MenuVertical_Paint(object sender, PaintEventArgs e)
         {
 
@@ -156,7 +149,8 @@ namespace PresentacionFinal
 
         private void BotonPagos_Click(object sender, EventArgs e)
         {
-
+            AbrirFormularioHijo(new FrmPagoCliente());
+            OcultarSubmenu();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

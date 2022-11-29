@@ -28,5 +28,17 @@ namespace Logica
                 throw;
             }
         }
+        public Entrenadores GetEntrenadorById(int id)
+        {
+            try
+            {
+                return entrenadorDao.GetEntrenadorById(id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

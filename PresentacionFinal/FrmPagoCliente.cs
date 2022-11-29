@@ -16,5 +16,10 @@ namespace PresentacionFinal
         {
             InitializeComponent();
         }
+
+        private void BotonCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
